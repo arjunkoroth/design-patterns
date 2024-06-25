@@ -72,7 +72,7 @@ public class ObserverPatternTest {
         orderEntities.forEach(orderEntity -> {
             assertEquals(itemName, orderEntity.getItemName());
             assertEquals(orderStatus, orderEntity.getOrderStatus());
-            assertEquals(paymentStatus, orderEntity.getPaymentStatus());
+            assertEquals(paymentStatus, orderEntity.getPaymentEntity().getPaymentStatus());
         });
     }
 }
