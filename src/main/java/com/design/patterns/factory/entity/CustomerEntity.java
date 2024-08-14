@@ -6,9 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
-
-import java.time.Instant;
+import java.util.Set;
 import java.util.UUID;
 
 @Data
@@ -28,4 +26,7 @@ public class CustomerEntity extends AbstractEntity {
 
     @Column(name = "CUSTOMER_TYPE")
     private String customerType;
+
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    private Set<CustomerAddressEntity> addressEntities;
 }

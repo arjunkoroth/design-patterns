@@ -4,6 +4,7 @@
 
     <include file="db/changelog/create-schema.xml" />
     <include file="db/changelog/tables/factory/customer-entity.xml" />
+    <include file="db/changelog/tables/factory/customer-address.xml" />
 
     <include file="db/changelog/tables/observer/payment-entity.xml" />
     <include file="db/changelog/tables/observer/order-entity.xml" />
