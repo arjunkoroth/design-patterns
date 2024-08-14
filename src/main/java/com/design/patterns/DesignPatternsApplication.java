@@ -37,14 +37,14 @@ public class DesignPatternsApplication {
 	public CommandLineRunner commandLineRunner(CustomerServiceFactory customerServiceFactory,
 											   OrderService orderService) {
 		return runner ->{
-			//testCreationalPattern(customerServiceFactory);
-			testObserverPattern(orderService);
+			testCreationalPattern(customerServiceFactory);
+			//testObserverPattern(orderService);
 		};
 	}
 
 	private void testCreationalPattern(CustomerServiceFactory customerServiceFactory) {
-		CustomerDTO regularCustomer = new CustomerDTO("Alice");
-		CustomerDTO premiumCustomer = new CustomerDTO("Bob");
+		CustomerDTO regularCustomer = new CustomerDTO("Alice", "Cochin");
+		CustomerDTO premiumCustomer = new CustomerDTO("Bob", "Trivandrum");
 		CustomerService regularCustomerService = customerServiceFactory.getCustomerService(CustomerType.REGULAR);
 		CustomerService premiumCustomerService = customerServiceFactory.getCustomerService(CustomerType.PREMIUM);
 		UUID regularCustomerServiceId = regularCustomerService.saveCustomer(regularCustomer);

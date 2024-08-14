@@ -56,8 +56,8 @@ class FactoryPatternTest {
 	@DisplayName("Should save customer details to db")
 	void test_customer_service_factory() {
 		// Arrange
-		CustomerDTO regularCustomer = new CustomerDTO("Arjun");
-		CustomerDTO premiumCustomer = new CustomerDTO("Charlie");
+		CustomerDTO regularCustomer = new CustomerDTO("Arjun", "Test");
+		CustomerDTO premiumCustomer = new CustomerDTO("Charlie", "Test");
 		CustomerService regularCustomerService = customerServiceFactory.getCustomerService(CustomerType.REGULAR);
 		CustomerService premiumCustomerService = customerServiceFactory.getCustomerService(CustomerType.PREMIUM);
 
