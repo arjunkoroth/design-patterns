@@ -38,7 +38,7 @@ public class DesignPatternsApplication {
 											   OrderService orderService) {
 		return runner ->{
 			testCreationalPattern(customerServiceFactory);
-			//testObserverPattern(orderService);
+			testObserverPattern(orderService);
 		};
 	}
 
